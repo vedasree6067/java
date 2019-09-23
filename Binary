@@ -1,0 +1,20 @@
+import java.io.*;
+import java.util.Scanner;
+class Binary{
+  public static void main(String[]args){
+     int i,j;
+     Scanner sc= new Scanner(System.in);
+     int n=sc.nextInt();
+     for(i=1;i<=n;i++){
+          for(j=n;j>=i;j--){
+        	  if(i%2==0) {
+              System.out.print(0);
+        	  }
+        	  else {
+        		  System.out.print(1);
+        	  }
+          }
+           System.out.println();
+           }
+           }
+}
