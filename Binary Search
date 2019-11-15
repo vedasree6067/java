@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class BinarySearch {
+
+	public static int binarySearch(int[] input, int elem){
+		int start = 0;
+		int end = input.length - 1;
+		while(start <= end){
+			int mid = (start + end) / 2;
+			if(elem == input[mid]){
+				return mid;
+			}
+			else if(elem > input[mid]){
+				start = mid + 1;
+			}else{
+				end = mid - 1;
+			}
+		}
+		
+		return -1;
+	}
+	
+	
+	public static void main(String[] args) {
+	Scanner s = new Scanner(System.in);
+	int size = s.nextInt();
+	//nt num=s.nextInt();
+	int arr[] = new int[size];
+	for (int i = 0; i < size; i++) {
+		arr[i] = s.nextInt();
+	}
+		//int[] arr = takeInput();
+		int num = s.nextInt();
+		System.out.print(binarySearch(arr, num));
+	}
+}
